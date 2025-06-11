@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Raut - AI Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .animate-gradient {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #2196F3, #00BCD4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-black hover-scale">RR</h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-gray-600 transition hover:scale-110">Home</a>
+                    <a href="#about" class="hover:text-gray-600 transition hover:scale-110">About</a>
+                    <a href="#experience" class="hover:text-gray-600 transition hover:scale-110">Experience</a>
+                    <a href="#projects" class="hover:text-gray-600 transition hover:scale-110">Projects</a>
+                    <a href="#contact" class="hover:text-gray-600 transition hover:scale-110">Contact</a>
+                </div>
+                <button class="md:hidden hover-scale" id="menuBtn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 shadow-lg">
+        <div class="p-4">
+            <button id="closeMenu" class="absolute top-4 right-4">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div class="flex flex-col space-y-4 mt-8">
+                <a href="#home" class="hover:text-gray-600 transition">Home</a>
+                <a href="#about" class="hover:text-gray-600 transition">About</a>
+                <a href="#experience" class="hover:text-gray-600 transition">Experience</a>
+                <a href="#projects" class="hover:text-gray-600 transition">Projects</a>
+                <a href="#contact" class="hover:text-gray-600 transition">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section with Video Background -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="video-background" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+            <video autoplay muted loop playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: 100%; height: 100%; transform: translateX(-50%) translateY(-50%); object-fit: cover;">
+                <source src="AdobeStock_1288836175_Video_HD_Preview.mp4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 animate-fade-in text-white">Rahul Raut</h1>
+            <h2 class="text-xl sm:text-2xl md:text-3xl text-emerald-400 mb-6 animate-fade-in-delay">AI Engineer</h2>
+            <p class="text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto animate-fade-in-delay-2 text-rose-300 px-4">
+                Transforming ideas into intelligent solutions through AI and automation
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-delay-3 px-4">
+                <a href="#contact" class="bg-black hover:bg-gray-800 px-6 py-3 rounded-full transition text-white hover-scale">Contact Me</a>
+                <a href="#projects" class="bg-black hover:bg-gray-800 px-6 py-3 rounded-full transition text-white border border-black hover-scale">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center text-black" data-aos="fade-up">About Me</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-lg mb-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-lg text-gray-700 mb-6">
+                        🚀 I'm a passionate and experienced AI Engineer and Software Developer dedicated to building intelligent, scalable, and production-grade solutions. From cutting-edge real-time AI applications to industry-level software systems, I provide end-to-end technology solutions tailored to your needs.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg mb-8 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-4 text-black">💡 What I Offer</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Custom AI Solutions — From Computer Vision to Natural Language Processing, I create smart systems that solve real-world problems.</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Full-Stack Development — I can develop complete web and software systems using modern frameworks and tools.</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Real-Time AI Projects — Expertise in building live systems using technologies like OpenCV, TensorFlow, and more.</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Industry-Scale Project Delivery — Whether it's a startup MVP or a full enterprise-grade solution, I can deliver high-performance, secure, and reliable systems.</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Smart Automation & Integration — Automate your business tasks with intelligent workflows using AI and modern APIs.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg mb-8 card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-4 text-black">🔧 Technical Expertise</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <p class="flex items-center text-gray-700 hover-scale">
+                                <span class="mr-2">👁️‍🗨️</span>
+                                Computer Vision | OpenCV | Object Detection
+                            </p>
+                            <p class="flex items-center text-gray-700 hover-scale">
+                                <span class="mr-2">🧠</span>
+                                Deep Learning | PyTorch | TensorFlow
+                            </p>
+                            <p class="flex items-center text-gray-700 hover-scale">
+                                <span class="mr-2">🌐</span>
+                                Backend: Django, Flask | Frontend: React.js, Tailwind CSS
+                            </p>
+                        </div>
+                        <div class="space-y-3">
+                            <p class="flex items-center text-gray-700 hover-scale">
+                                <span class="mr-2">⚡</span>
+                                Realtime Systems | Edge AI | Stream Processing
+                            </p>
+                            <p class="flex items-center text-gray-700 hover-scale">
+                                <span class="mr-2">💽</span>
+                                MySQL, PostgreSQL, MongoDB
+                            </p>
+                            <p class="flex items-center text-gray-700 hover-scale">
+                                <span class="mr-2">☁️</span>
+                                Deployment on AWS, Vercel, Render
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-4 text-black">🌍 Why Choose Me?</h3>
+                    <p class="text-gray-700 mb-6">
+                        I don't just write code — I craft solutions that are efficient, scalable, and aligned with your business goals. If you're looking for someone who can turn AI ideas into working reality, whether it's a smart app or a powerful backend system, you're at the right place.
+                    </p>
+                    <p class="text-xl font-semibold text-gradient">
+                        Let's build something extraordinary together.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects We Deliver Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4 text-center text-black" data-aos="fade-up">🧠 What Projects We Deliver</h2>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Explore the range of projects we can build — from simple automations to complex real-time AI systems. We provide powerful and scalable solutions tailored to your needs.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Computer Vision Projects -->
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-4 text-black">🔍 Computer Vision Projects</h3>
+                    <p class="text-gray-600 mb-4">We build advanced visual intelligence systems using OpenCV, YOLO, and Deep Learning.</p>
+                    <div class="mb-6 rounded-lg overflow-hidden shadow-md">
+                        <video class="w-full" autoplay muted loop playsinline>
+                            <source src="opencv.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Real-time Person Detection & Tracking</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Hand Detection & Gesture Control</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Face Recognition & Face Analysis</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Object Detection & Classification</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Vehicle & License Plate Recognition</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Crowd Counting & Heatmaps</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Barcode & QR Code Scanning</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Pose Estimation & Human Activity Detection</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AI & Machine Learning Projects -->
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-4 text-black">🤖 AI & Machine Learning Projects</h3>
+                    <p class="text-gray-600 mb-4">Intelligent systems that learn, predict, and automate your tasks.</p>
+                    <div class="mb-6 rounded-lg overflow-hidden shadow-md">
+                        <video class="w-full" autoplay muted loop playsinline>
+                            <source src="machine.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Predictive Analytics (Sales, Stock, Weather, etc.)</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Chatbots with NLP (Food, Customer Service, Career, etc.)</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Text & Speech Processing (Summarization, Translation, etc.)</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Recommendation Systems (E-commerce, Movies, Careers)</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Fraud Detection & Risk Analysis</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">AI for Healthcare & Diagnostics</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Web & Software Development -->
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl font-bold mb-4 text-black">🌐 Web & Software Development</h3>
+                    <p class="text-gray-600 mb-4">Modern, responsive, and scalable full-stack applications.</p>
+                    <div class="mb-6 rounded-lg overflow-hidden shadow-md">
+                        <video class="w-full" autoplay muted loop playsinline>
+                            <source src="software.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Business Websites & Landing Pages</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Admin Panels & Dashboards</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Portfolio & Resume Builders</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Job/Internship Portals</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">E-commerce Platforms</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Education & LMS Platforms</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Custom Web Tools & Automation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Real-Time Systems -->
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="text-xl font-bold mb-4 text-black">⚙️ Real-Time Systems</h3>
+                    <p class="text-gray-600 mb-4">Systems built to work in real-time for automation and monitoring.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Live Camera AI Detection</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Sensor & Motor Data Logging</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Real-time Alerts & Notifications</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Dashboard for Monitoring AI Outputs</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Edge AI on Raspberry Pi / Jetson</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Industry-Level Projects -->
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600">
+                    <h3 class="text-xl font-bold mb-4 text-black">🏭 Industry-Level Projects</h3>
+                    <p class="text-gray-600 mb-4">Tailored for large-scale applications across sectors.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Smart Surveillance Systems</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Industrial Machine Monitoring with AI</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">AI-based Quality Control Systems</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Logistics & Fleet Management Tools</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Manufacturing Defect Detection</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">AI-powered CRM & ERP Modules</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile & Android Applications -->
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover" data-aos="fade-up" data-aos-delay="700">
+                    <h3 class="text-xl font-bold mb-4 text-black">📱 Mobile & Android Applications</h3>
+                    <p class="text-gray-600 mb-4">Lightweight, intuitive, and AI-integrated mobile apps.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Android apps with AI camera features</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Real-time object/person detection on mobile</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Control IoT Devices from mobile</span>
+                        </li>
+                        <li class="flex items-start hover-scale">
+                            <span class="text-green-500 mr-2">✅</span>
+                            <span class="text-gray-700">Business tools for mobile users</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="800">
+                <h3 class="text-2xl font-bold mb-4 text-black">💡 Have an Idea?</h3>
+                <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                    We turn ideas into real, working AI-powered systems — customized to your goals and business. Whether you're a startup or a large enterprise, we can build it for you.
+                </p>
+                <a href="#contact" class="inline-block bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-full transition hover-scale">
+                    📞 Let's connect and build your next big project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center text-black" data-aos="fade-up">Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-2 text-black">AI Engineer | Industrial Automation Developer</h3>
+                    <p class="text-gray-600 mb-4">Adroit Engineering | Nov 2024 - Present</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li class="hover-scale">Developed automated drive testing tools using KEBA KeStudio</li>
+                        <li class="hover-scale">Delivered 4 industrial automation solutions for different drive types</li>
+                        <li class="hover-scale">Scaled daily drive testing capacity from 10 to over 50 units</li>
+                        <li class="hover-scale">Enhanced testing accuracy and repeatability, reducing human error by approximately 40%</li>
+                        <li class="hover-scale">Worked cross-functionally with hardware and software teams to deliver solutions within project timelines</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-2 text-black">Data Science Intern</h3>
+                    <p class="text-gray-600 mb-4">Cognifyz Technologies | Jan 2024 - Feb 2024</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li class="hover-scale">Conducted gold price prediction and restaurant trend analysis using data science techniques</li>
+                        <li class="hover-scale">Implemented data science techniques for business insights</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-2 text-black">Artificial Intelligence Intern</h3>
+                    <p class="text-gray-600 mb-4">CodSoft | Feb 2024 - March 2024</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li class="hover-scale">Built a log-counting system using YOLO object detection, achieving 90%+ accuracy</li>
+                        <li class="hover-scale">Automated real-time object counting in images/videos and exported data to CSV for tracking</li>
+                        <li class="hover-scale">Fine-tuned deep learning models and optimized image preprocessing for improved detection accuracy</li>
+                        <li class="hover-scale">Cleaned and preprocessed datasets with 100K+ rows, eliminating missing and inconsistent entries</li>
+                        <li class="hover-scale">Performed exploratory data analysis (EDA) using Matplotlib and Seaborn to visualize hidden patterns</li>
+                        <li class="hover-scale">Engineered 10+ features and normalized datasets to improve model accuracy by 15-20%</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-2 text-black">Python Developer Intern</h3>
+                    <p class="text-gray-600 mb-4">CCA-TECHNO PVT.LTD | March 2023 - Apr 2023</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li class="hover-scale">Developed a Resume Job Role Prediction system using NLP and cosine similarity</li>
+                        <li class="hover-scale">Created a rule-based chatbot with deep learning for handling FAQ-style interactions</li>
+                        <li class="hover-scale">Implemented a Tic Tac Toe AI game using the Minimax algorithm with unbeatable performance</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="text-2xl font-bold mb-2 text-black">Frontend Developer Intern</h3>
+                    <p class="text-gray-600 mb-4">CCA-TECHNO PVT.LTD | Jan 2022 - Feb 2022</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li class="hover-scale">Designed and deployed a car racing web game using HTML/CSS/JS with responsive design</li>
+                        <li class="hover-scale">Built the official website for Shivardha Foundation, incorporating mobile-first design and donation features</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center text-black" data-aos="fade-up">Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-4 text-black">Log-Counting System</h3>
+                    <p class="mb-4 text-gray-700">Built using YOLO object detection with 90%+ accuracy</p>
+                    <a href="https://huggingface.co/spaces/Rahul-Rawat/log-count" class="text-black hover:text-gray-600 hover-scale" target="_blank">View Project →</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-4 text-black">Job Role Predictor</h3>
+                    <p class="mb-4 text-gray-700">NLP-based system for resume analysis and job role prediction</p>
+                    <a href="https://huggingface.co/spaces/Rahul-Rawat/system" class="text-black hover:text-gray-600 hover-scale" target="_blank">View Project →</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-4 text-black">Medicinal Plant Identifier</h3>
+                    <p class="mb-4 text-gray-700">AI-powered plant identification system</p>
+                    <a href="https://huggingface.co/spaces/Rahul-Rawat/Medicinal_Plant_Identifier_" class="text-black hover:text-gray-600 hover-scale" target="_blank">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center text-black" data-aos="fade-up">Contact</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center space-x-4 hover-scale">
+                            <i class="fas fa-phone text-black"></i>
+                            <p class="text-gray-700">+91 8262950757</p>
+                        </div>
+                        <div class="flex items-center space-x-4 hover-scale">
+                            <i class="fas fa-envelope text-black"></i>
+                            <p class="text-gray-700">rautrahul.t@gmail.com</p>
+                        </div>
+                        <div class="flex items-center space-x-4 hover-scale">
+                            <i class="fas fa-map-marker-alt text-black"></i>
+                            <p class="text-gray-700">Hadapsar, Pune</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="https://www.linkedin.com/in/raut-rahul/" target="_blank" class="flex items-center space-x-4 hover:text-gray-600 transition hover-scale">
+                            <i class="fab fa-linkedin text-2xl text-black"></i>
+                            <p class="text-gray-700">LinkedIn</p>
+                        </a>
+                        <a href="https://github.com/raut-rahul-2137" target="_blank" class="flex items-center space-x-4 hover:text-gray-600 transition hover-scale">
+                            <i class="fab fa-github text-2xl text-black"></i>
+                            <p class="text-gray-700">GitHub</p>
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/rautrahullive" target="_blank" class="flex items-center space-x-4 hover:text-gray-600 transition hover-scale">
+                            <i class="fab fa-hackerrank text-2xl text-black"></i>
+                            <p class="text-gray-700">HackerRank</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 
